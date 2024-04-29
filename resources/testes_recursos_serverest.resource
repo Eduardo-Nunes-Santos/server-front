@@ -12,13 +12,14 @@ ${cadastrarButton}           //button[@data-testid='cadastrar'][contains(.,'Cada
 *** Keywords ***
 
 Abrir o navegador
-   Open Browser  browser=chrome
+#headlesschrome para não pedir a instalação do chrome driver
+   Open Browser  browser=headlesschrome
    Maximize Browser Window
   
    
 Fechar o navegador
     Close Browser
-
+#Acessando o Browser
 Passo 1 - Acessar a pagina de login ServeRest
    Go to   url=${URL}
 Passo 2 - Clicar em cadastre-se    
